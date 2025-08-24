@@ -104,7 +104,7 @@ A simple physics-based game where a ball falls due to gravity and jumps when the
 ### 1. DotDash
 | | |
 |-|-|
-| **Preview** | ![](demo_images/DotDash_demo.png) |
+| **Preview** | <img src="demo_images/DotDash_demo.png" width="40%"> |
 | **Description** | A simple game where a circle moves with WASD keys. |
 | **Key Learnings** | - Drawing objects (circles)<br>- Displaying text in Pygame |
 
@@ -113,7 +113,7 @@ A simple physics-based game where a ball falls due to gravity and jumps when the
 ### 2. BrickBreaker
 | | |
 |-|-|
-| **Preview** | ![](demo_images/BrickBreaker_demo.png) |
+| **Preview** | <img src="demo_images/BrickBreaker_demo.png" width="40%"> |
 | **Description** | Classic paddle-ball brick breaker. |
 | **Key Learnings** | - Difference: `pygame.draw.rect()` vs `pygame.Rect()`<br>- Collision detection & movement logic |
 
@@ -122,7 +122,7 @@ A simple physics-based game where a ball falls due to gravity and jumps when the
 ### 3. BouncingBall
 | | |
 |-|-|
-| **Preview** | ![](demo_images/BouncingBall_demo.png) |
+| **Preview** | <img_src="demo_images/BouncingBall_demo.png" width="40%"> |
 | **Description** | A ball bounces with four paddles (W/S, A/D, arrows). |
 | **Key Learnings** | - Extended logic from BrickBreaker<br>- Learned win/restart conditions<br>- Multi-direction controls (too messy, needs fixing!) |
 
@@ -131,7 +131,7 @@ A simple physics-based game where a ball falls due to gravity and jumps when the
 ### 4. RunToTheEdge
 | | |
 |-|-|
-| **Preview** | ![](demo_images/RunToTheEdge_demo.png) |
+| **Preview** | <img_src="demo_images/RunToTheEdge_demo.png" width="40%"> |
 | **Description** | Sprite character runs to the screen edge. |
 | **Key Learnings** | - Using sprite sheets<br>- Dynamic text effects (like GIF)<br>- Restart feature |
 
@@ -140,6 +140,6 @@ A simple physics-based game where a ball falls due to gravity and jumps when the
 ### 5. FlappyBall
 | | |
 |-|-|
-| **Preview** | ![](demo_images/FlappyBall_demo.png) |
+| **Preview** | <img_src="demo_images/FlappyBall_demo.png" width="40%"> |
 | **Description** | Gravity-based ball that jumps with spacebar. |
 | **Key Learnings** | - Gravity & jump mechanics<br>- Dynamic win message display |
