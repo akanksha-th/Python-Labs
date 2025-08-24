@@ -35,71 +35,9 @@ Some are cool, some are broken — all are part of the journey!
             FlappyBall_demo.png
             RunToTheEdge_demo.png
 
---------------------------------------------------------
-
-## Here's what I learned
-
-### 1. DotDash
-**Description:**
-
-A simple game where a circle moves across the screen using the WASD keys. The game introduces basic movement mechanics.
-
-**What I Learned:**
-- How to draw objects (like circles) on the screen using Pygame.
-- How to display text on the screen.
-
-### 2. BrickBreaker
-**Description:**
-
-A classic brick-breaking game where a player-controlled paddle bounces a ball to break bricks.
-
-**What I Learned:**
-- The difference between shape objects (pygame.draw.rect()) and placeholders- for positioning & collision detection (pygame.Rect()).
-- How to implement collision detection and control object movement using logic.
-
-### 3. BouncingBall
-**Description:**
-
- The left and right paddles are controlled using W/S and Up/Down keys, while the top and bottom paddles are controlled using A/D and Left/Right keys. The game stops when the ball escapes the screen.
-
-**What I Learned:**A visualization game with four paddles and a bouncing ball.
-- Attempted to extend knowledge from the BrickBreaker game.
-- The complexity of multi-directional controls made the game difficult to manage.
-- This game needs fixing to improve playability.
-- Learned how to detect win condition and how to implement a game restart feature.
-
-
-### 4. RunToTheEdge
-**Description:**
-
-A game where a sprite character moves left and right using arrow keys to reach the other end of the screen.
-
-**What I Learned:**
-- How to use sprite sheets in Pygame.
-- How to create text that changes size dynamically, simulating a GIF effect.
-- Implemented a game restart feature.
-
-### 5. Flappy Ball
-**Description:**
-
-A simple physics-based game where a ball falls due to gravity and jumps when the spacebar is pressed. The goal is to reach the top of the screen to win. If successful, the game displays a "You Win!" message and restarts after 10 seconds.
-
-**What I Learned:**
-- How to apply gravity and jump mechanics in Pygame.
-- How to display a win message dynamically.
-
 ---
 
-## 🖼️ Game Previews  
-
-| DotDash | BrickBreaker | BouncingBall | RunToTheEdge | FlappyBall |
-|---------|--------------|--------------|--------------|------------|
-| A simple game where a circle moves across the screen using the WASD keys. <br><br> ![](demo_images/DotDash_demo.png) | A classic brick-breaking game where a player-controlled paddle bounces a ball to break bricks. <br><br> ![](demo_images/BrickBreaker_demo.png) | A visualization game with four paddles and a bouncing ball. The left and right paddles are controlled using W/S and Up/Down keys, while the top and bottom paddles are controlled using A/D and Left/Right keys. The game stops when the ball escapes the screen. <br><br> ![](demo_images/BouncingBall_demo.png) | A game where a sprite character moves left and right using arrow keys to reach the other end of the screen. <br><br> ![](demo_images/RunToTheEdge_demo.png) | A simple physics-based game where a ball falls due to gravity and jumps when the spacebar is pressed. The goal is to reach the top of the screen to win. If successful, the game displays a "You Win!" message and restarts after 10 seconds. <br><br> ![](demo_images/FlappyBall_demo.png) |
-| **What I Learned:** <br> - How to draw objects (like circles) on the screen using Pygame. <br> - How to display text on the screen. | **What I Learned:** <br> - The difference between shape objects (`pygame.draw.rect()`) and placeholders for positioning & collision detection (`pygame.Rect()`). <br> - How to implement collision detection and control object movement using logic. | **What I Learned:** <br> - Attempted to extend knowledge from the BrickBreaker game. <br> - The complexity of multi-directional controls made the game difficult to manage. <br> - This game needs fixing to improve playability. <br> - Learned how to detect win condition and how to implement a game restart feature. | **What I Learned:** <br> - How to use sprite sheets in Pygame. <br> - How to create text that changes size dynamically, simulating a GIF effect. <br> - Implemented a game restart feature. | **What I Learned:** <br> - How to apply gravity and jump mechanics in Pygame. <br> - How to display a win message dynamically. |
-
-
-
-## 🎯 What I Built & Learned
+## Game Preview and Key Learnings
 
 ### 1. DotDash
 | | |
@@ -122,7 +60,7 @@ A simple physics-based game where a ball falls due to gravity and jumps when the
 ### 3. BouncingBall
 | | |
 |-|-|
-| **Preview** | <img_src="demo_images/BouncingBall_demo.png" width="40%"> |
+| **Preview** | <img src="demo_images/BouncingBall_demo.png" width="40%"> |
 | **Description** | A ball bounces with four paddles (W/S, A/D, arrows). |
 | **Key Learnings** | - Extended logic from BrickBreaker<br>- Learned win/restart conditions<br>- Multi-direction controls (too messy, needs fixing!) |
 
@@ -131,7 +69,7 @@ A simple physics-based game where a ball falls due to gravity and jumps when the
 ### 4. RunToTheEdge
 | | |
 |-|-|
-| **Preview** | <img_src="demo_images/RunToTheEdge_demo.png" width="40%"> |
+| **Preview** | <img src="demo_images/RunToTheEdge_demo.png" width="40%"> |
 | **Description** | Sprite character runs to the screen edge. |
 | **Key Learnings** | - Using sprite sheets<br>- Dynamic text effects (like GIF)<br>- Restart feature |
 
@@ -140,6 +78,6 @@ A simple physics-based game where a ball falls due to gravity and jumps when the
 ### 5. FlappyBall
 | | |
 |-|-|
-| **Preview** | <img_src="demo_images/FlappyBall_demo.png" width="40%"> |
+| **Preview** | <img src="demo_images/FlappyBall_demo.png" width="40%"> |
 | **Description** | Gravity-based ball that jumps with spacebar. |
 | **Key Learnings** | - Gravity & jump mechanics<br>- Dynamic win message display |
