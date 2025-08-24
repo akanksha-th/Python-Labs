@@ -60,9 +60,9 @@ A classic brick-breaking game where a player-controlled paddle bounces a ball to
 ### 3. BouncingBall
 **Description:**
 
-A visualization game with four paddles and a bouncing ball. The left and right paddles are controlled using W/S and Up/Down keys, while the top and bottom paddles are controlled using A/D and Left/Right keys. The game stops when the ball escapes the screen.
+ The left and right paddles are controlled using W/S and Up/Down keys, while the top and bottom paddles are controlled using A/D and Left/Right keys. The game stops when the ball escapes the screen.
 
-**What I Learned:**
+**What I Learned:**A visualization game with four paddles and a bouncing ball.
 - Attempted to extend knowledge from the BrickBreaker game.
 - The complexity of multi-directional controls made the game difficult to manage.
 - This game needs fixing to improve playability.
@@ -93,6 +93,8 @@ A simple physics-based game where a ball falls due to gravity and jumps when the
 ## 🖼️ Game Previews  
 
 | DotDash | BrickBreaker | BouncingBall | RunToTheEdge | FlappyBall |
+ ![]|A simple game where a circle moves with WASD keys. | ![]Classic paddle-ball brick breaker. | ![]A ball bounces with four paddles (W/S, A/D, arrows). | ![]Sprite character runs to the screen edge. | ![]Gravity-based ball that jumps with spacebar. |
+|---------|--------------|--------------|--------------|------------|
 |---------|--------------|--------------|--------------|------------|
 | ![](demo_images/DotDash_demo.png) | ![](demo_images/BrickBreaker_demo.png) | ![](demo_images/BouncingBall_demo.png) | ![](demo_images/RunToTheEdge_demo.png) | ![](demo_images/FlappyBall_demo.png) |
 
