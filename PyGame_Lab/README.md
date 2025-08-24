@@ -93,10 +93,9 @@ A simple physics-based game where a ball falls due to gravity and jumps when the
 ## 🖼️ Game Previews  
 
 | DotDash | BrickBreaker | BouncingBall | RunToTheEdge | FlappyBall |
-| ![]A simple game where a circle moves with WASD keys. | ![]Classic paddle-ball brick breaker. | ![]A ball bounces with four paddles (W/S, A/D, arrows). | ![]Sprite character runs to the screen edge. | ![]Gravity-based ball that jumps with spacebar. |
 |---------|--------------|--------------|--------------|------------|
-|---------|--------------|--------------|--------------|------------|
-| ![](demo_images/DotDash_demo.png) | ![](demo_images/BrickBreaker_demo.png) | ![](demo_images/BouncingBall_demo.png) | ![](demo_images/RunToTheEdge_demo.png) | ![](demo_images/FlappyBall_demo.png) |
+| A simple game where a circle moves with WASD keys. <br><br> ![](demo_images/DotDash_demo.png) | Classic paddle-ball brick breaker. <br><br> ![](demo_images/BrickBreaker_demo.png) | A ball bounces with four paddles (W/S, A/D, arrows). <br><br> ![](demo_images/BouncingBall_demo.png) | Sprite character runs to the screen edge. <br><br> ![](demo_images/RunToTheEdge_demo.png) | Gravity-based ball that jumps with spacebar. <br><br> ![](demo_images/FlappyBall_demo.png) |
+
 
 ## 🎯 What I Built & Learned
 
