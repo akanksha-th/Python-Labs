@@ -17,6 +17,5 @@ Heyy! This is a collection of all the Python fun and mini-projects I once had sc
 
 ---
 
-## ✨ Why This Exists  
-Not every project needs to be “big.”  
-This repo is my **sandbox** — a place to experiment, reset, and just have fun with Python.  
+## Why This Exists?
+This repo is my **sandbox** - a place to experiment, reset, and just have fun with Python. 
