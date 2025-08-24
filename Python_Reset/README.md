@@ -8,7 +8,7 @@ Sometimes, you just need to go back to where it all started.
 ## Folder Structure
 
     Python_Reset
-    │    day1_prime_numbers.ipynb
+    │   day1_prime_numbers.ipynb
     │   day2_sets_dicts.ipynb
     │   day3_strings.ipynb
     │   day4_stack_in_class.ipynb
