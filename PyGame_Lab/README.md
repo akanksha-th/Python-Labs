@@ -1,9 +1,43 @@
 # PyGameLab
-Just having fun with Pygame! 🎮 Learning by building one small game at a time — some might be cool, some might be lame, but all are part of the journey.
 
-Below is a brief description of each project along with key takeaways from the development process.
+Once upon a boring spring, with a week’s holiday and an empty hostel…  
+I decided to pick up a new hobby — that’s when I tried my hands on **Pygame**.  
+It was fun if nothing else, and I’ll be catching on soon! INDEED!!  
+
+---
+
+## 🕹️ What’s Inside?  
+A bunch of mini-games I built while learning Pygame.  
+Some are cool, some are broken — all are part of the journey!  
+
+- **DotDash** → Moving shapes & basic controls 
+- **BrickBreaker** → Collision detection & paddle logic 
+- **BouncingBall** → Multi-directional controls (needs fixing!)  
+- **RunToTheEdge** → Sprite sheets & restart mechanics  
+- **FlappyBall** → Gravity, jump physics & win conditions  
+
+---
+
+## Folder Structure
+
+    PyGame_Labs
+    │   1.DotDash.py
+    │   2.BrickBreaker.py
+    │   3.BouncingBall.py
+    │   4.Run_to_the_edge.py
+    │   5.FlappyBall.py
+    │   README.md
+    │   
+    └───demo_images
+            BouncingBall_demo.png
+            BrickBreaker_demo.png
+            DotDash_demo.png
+            FlappyBall_demo.png
+            RunToTheEdge_demo.png
 
 --------------------------------------------------------
+
+## Here's what I learned
 
 ### 1. DotDash
 **Description:**
@@ -14,12 +48,6 @@ A simple game where a circle moves across the screen using the WASD keys. The ga
 - How to draw objects (like circles) on the screen using Pygame.
 - How to display text on the screen.
 
-**Preview:**
-
-![Game Preview](demo_images/DotDash_demo.png)
-
---------------------------------------------------------
-
 ### 2. BrickBreaker
 **Description:**
 
@@ -28,12 +56,6 @@ A classic brick-breaking game where a player-controlled paddle bounces a ball to
 **What I Learned:**
 - The difference between shape objects (pygame.draw.rect()) and placeholders- for positioning & collision detection (pygame.Rect()).
 - How to implement collision detection and control object movement using logic.
-
-**Preview:**
-
-![Game Preview](demo_images/BrickBreaker_demo.png)
-
---------------------------------------------------------
 
 ### 3. BouncingBall
 **Description:**
@@ -46,11 +68,6 @@ A visualization game with four paddles and a bouncing ball. The left and right p
 - This game needs fixing to improve playability.
 - Learned how to detect win condition and how to implement a game restart feature.
 
-**Preview:**
-
-![Game Preview](demo_images/BouncingBall_demo.png)
-
---------------------------------------------------------
 
 ### 4. RunToTheEdge
 **Description:**
@@ -62,12 +79,6 @@ A game where a sprite character moves left and right using arrow keys to reach t
 - How to create text that changes size dynamically, simulating a GIF effect.
 - Implemented a game restart feature.
 
-**Preview:**
-
-![Game Preview](demo_images/RunToTheEdge_demo.png)
-
---------------------------------------------------------
-
 ### 5. Flappy Ball
 **Description:**
 
@@ -77,8 +88,10 @@ A simple physics-based game where a ball falls due to gravity and jumps when the
 - How to apply gravity and jump mechanics in Pygame.
 - How to display a win message dynamically.
 
-**Preview:**
+---
 
-![Game Preview](demo_images/FlappyBall_demo.png)
+## 🖼️ Game Previews  
 
---------------------------------------------------------
+| DotDash | BrickBreaker | BouncingBall | RunToTheEdge | FlappyBall |
+|---------|--------------|--------------|--------------|------------|
+| ![](demo_images/DotDash_demo.png) | ![](demo_images/BrickBreaker_demo.png) | ![](demo_images/BouncingBall_demo.png) | ![](demo_images/RunToTheEdge_demo.png) | ![](demo_images/FlappyBall_demo.png) |
