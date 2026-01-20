@@ -69,6 +69,8 @@ if st.button("▶ Run code"):
     st.write("Output:")
     st.success("Hello, Python world!")
 
+st.divider()
+
 st.markdown("""
-We are all set to learn now. Let's go!!
+## We are all set to learn now. Let's go!!
 """)
