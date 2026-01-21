@@ -2,6 +2,8 @@ import streamlit as st
 
 st.title("Hello, Python!")
 
+st.divider()
+
 st.markdown("""
 ### 📖Context            
 
