@@ -62,7 +62,7 @@ This becomes extremely useful when debugging.""")
 st.divider()
 
 st.markdown("""
-### 🧮 Strings
+### 🔡 Strings
             
 A string in python is a series of characters. Anything written within quotes ("" or '') is a string.
 
@@ -108,7 +108,7 @@ Output: `Hi, John Mayer`
 st.divider()
 
 st.markdown("""
-### 🧮 Numbers
+### 🔢 Numbers
             
 We can add (+), subtract (-), multiply (*), and divide (/)
 integers in Python. We won’t go deep into integer vs float operations here.
@@ -185,7 +185,7 @@ And as discussed above, constants can be defined like this: `NUM_RETRIES = 50` o
 st.divider()
 
 st.markdown("""
-### 🧮 Comments and Docstrings
+### 🤫 Comments and Docstrings
             
 Comments are extremely important and the most underrated features in most programming languages.
 In Python, **comments are ignored completely by the interpreter**.
