@@ -22,7 +22,7 @@ st.code(code_list, language="python")
 st.markdown("""
 Output: `[1, 'hello', 3.14, True, [2, 4, 3.9, 'world']]`
             
-We can access elements in a list using their `index` (which is a pythonic work for position). 
+We can access elements in a list using their `index` (which is a pythonic term for position). 
 Python uses zero-based indexing, so the first item is at index `0`, the second at index `1`, and so on. And indexes range from 0 to length(sequence)-1. We will deep dive into it in the "**memory**" section.   
 
 For example:""")
@@ -52,7 +52,7 @@ In python, lists are dynamic and mutable, meaning they can be changed after crea
 
 Here are some basic list operations:
 - **Modifying list elements** –>
-        - In order to change an element, we just need to specift it's location.
+        - In order to change an element, we just need to specify it's location.
 """)
 code_modify = '''motorcycles = ['honda', 'yamaha', 'suzuki'] 
 print(motorcycles) 
@@ -192,6 +192,7 @@ Output:
         `Charles Leclerc`  
         `Kimi Antonelli`  
 
+While loops are less commonly used for list traversal but are useful when manual index control is needed.
 ---
 
 - **Slicing Lists** –>
@@ -285,14 +286,67 @@ Output:
 code_comp = '''
 squares = [x**2 for x in range(1, 11)]
 print(squares)
+
+numbers = list(range(1, 21))
+even_squares = [x**2 for x in numbers if x % 2 == 0]
+print(even_squares)
+
+matrix = [[1, 2], [3, 4], [5, 6]]
+flattened = [num for row in matrix for num in row]
+print(flattened)
 '''
 st.code(code_comp, language="python")
 st.markdown("""
 Output:  
-        `[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]`
+`[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]`
+            
+`[4, 16, 36, 64, 100, 144, 196, 256, 324, 400]`
+        
+`[1, 2, 3, 4, 5, 6]`
 """)
 
 st.divider()
+
+st.markdown("""
+### 🪜 A little Advanced List Techniques
+            
+- **enumerate()** –>  
+        - `enumerate()` allows us to loop through a list while keeping track of both index and value.
+""")
+code_enum = '''
+drivers = ["Max", "Charles", "Lewis"]
+for i, driver in enumerate(drivers):
+    print(f"Driver {i + 1}: {driver}")
+'''
+st.code(code_enum, language="python")
+st.markdown("""
+Output:  
+        `Driver 1: Max`  
+        `Driver 2: Charles`  
+        `Driver 3: Lewis`  
+
+---
+            
+- **zip()** –>  
+        - `zip()` allows us to iterate over multiple lists in parallel.
+""")
+code_zip = '''
+drivers = ["Max", "Charles", "Lewis"]
+teams = ["Red Bull", "Ferrari", "Ferrari"]
+points = [421, 242, 156]
+for driver, team, score in zip(drivers, teams, points):
+        print(f"{driver} from {team} has {score} points.")
+'''
+st.code(code_zip, language="python")
+st.markdown("""
+Output:  
+        `Max from Red Bull has 421 points.`
+        `Charles from Ferrari has 242 points.`
+        `Lewis from Ferrari has 156 points.`
+""")
+
+st.divider()
+
 st.markdown("""
 ### Yep!!! Easy-peasy and straightforward. Wasn't a problem for us, right? Let's move ahead now.😎
 """)
