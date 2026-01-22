@@ -340,9 +340,9 @@ for driver, team, score in zip(drivers, teams, points):
 st.code(code_zip, language="python")
 st.markdown("""
 Output:  
-        `Max from Red Bull has 421 points.`
-        `Charles from Ferrari has 242 points.`
-        `Lewis from Ferrari has 156 points.`
+        `Max from Red Bull has 421 points.`  
+        `Charles from Ferrari has 242 points.`  
+        `Lewis from Ferrari has 156 points.`  
 """)
 
 st.divider()
