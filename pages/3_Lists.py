@@ -195,8 +195,101 @@ Output:
 ---
 
 - **Slicing Lists** –>
-        -   
-              
+        - We can extract a portion of a list using slices. The syntax is `list_name[start_index:end_index]`, which returns a new list containing elements from `start_index` to `end_index - 1`. 
+""")
+code_slice = '''
+fruits = ['apple', 'cherry', 'orange', 'grapes', 'kiwi', 'mango']
+print(fruits[1:4])  # Slicing from index 1 to 3
+print(fruits[:3])  # Slicing from start to index 2
+print(fruits[2:])  # Slicing from index 2 to end
+print(fruits[-4:-1])  # Slicing using negative indices
+'''
+st.code(code_slice, language="python")
+st.markdown("""
+Output:  
+        `['cherry', 'orange', 'grapes']`  
+        `['apple', 'cherry', 'orange']`  
+        `['orange', 'grapes', 'kiwi', 'mango']`  
+        `['orange', 'grapes', 'kiwi']`
+
+---
+            
+- **Copying the list** –>  
+        - We can create a copy of a list using slicing or the `list()` function to avoid modifying the original list when making changes to the copy.
+""")
+code_copy = '''
+original = ['a', 'b', 'c']
+
+copy1 = original[:]  # Using slicing
+copy1.append('d')
+print(f"Original list: {original}")
+print(f"copy1 after modification: {copy1}")
+
+copy2 = list(original)  # Using list() function
+copy2.append('e')
+print(f"Original list: {original}")
+print(f"copy2 after modification: {copy2}")
+
+false_copy = original  # This does NOT create a copy; both refer to the same list
+false_copy.append('f')
+print(f"Original list: {original}")
+print(f"false_copy: {false_copy}")
+'''
+st.code(code_copy, language="python")
+st.markdown("""
+Output:  
+`Original list: ['a', 'b', 'c']`  
+`copy1 after modification: ['a', 'b', 'c', 'd']`  
+
+`Original list: ['a', 'b', 'c']`  
+`copy2 after modification: ['a', 'b', 'c', 'e']`  
+
+`Original list: ['a', 'b', 'c', 'f']`  
+`false_copy: ['a', 'b', 'c', 'f']`    
+
+As evident, modifying `false_copy` will also modify `original`, while modifying `copy1` or `copy2` will not affect `original`.
+
+---
+            
+- **Simple Statistics** –> 
+""")
+code_stats = '''
+even_numbers = list(range(2, 11, 2))  # Generating a list using "range" function
+print(f"Even numbers: {even_numbers}")
+
+print(min(even_numbers))  # Minimum value
+print(max(even_numbers))  # Maximum value
+print(sum(even_numbers))  # Sum of all values
+print(len(even_numbers))  # Length of the list
+print(sum(even_numbers) / len(even_numbers))  # Average value
+print(even_numbers.count(4))  # Count occurrences of 4
+print(even_numbers.index(6))  # Index of first occurrence of 6
+'''
+st.code(code_stats, language="python")
+st.markdown("""
+Output:  
+        `Even numbers: [2, 4, 6, 8, 10]`  
+`2`  
+`10`  
+`30`  
+`5`  
+`6.0`  
+`1`  
+`2`  
+            
+---
+            
+- **List Comprehensions** –>  
+        - A list comprehension is a concise way to create lists. 
+""")
+code_comp = '''
+squares = [x**2 for x in range(1, 11)]
+print(squares)
+'''
+st.code(code_comp, language="python")
+st.markdown("""
+Output:  
+        `[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]`
 """)
 
 st.divider()
