@@ -1,5 +1,6 @@
 import streamlit as st
 
+st.set_page_config(page_title="Variables", layout="wide")
 st.title("Variables and Simple Data Types")
 
 st.divider()
