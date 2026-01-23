@@ -204,14 +204,19 @@ print(fruits[1:4])  # Slicing from index 1 to 3
 print(fruits[:3])  # Slicing from start to index 2
 print(fruits[2:])  # Slicing from index 2 to end
 print(fruits[-4:-1])  # Slicing using negative indices
+
+fruits[1:4] = ['plum', 'persimmon', 'watermelon']  # Modifying a slice
+print(fruits)
 '''
 st.code(code_slice, language="python")
 st.markdown("""
 Output:  
-        `['cherry', 'orange', 'grapes']`  
-        `['apple', 'cherry', 'orange']`  
-        `['orange', 'grapes', 'kiwi', 'mango']`  
-        `['orange', 'grapes', 'kiwi']`
+`['cherry', 'orange', 'grapes']`  
+`['apple', 'cherry', 'orange']`  
+`['orange', 'grapes', 'kiwi', 'mango']`  
+`['orange', 'grapes', 'kiwi']`  
+            
+`['apple', 'plum', 'persimmon', 'watermelon', 'kiwi', 'mango']`
 
 ---
             

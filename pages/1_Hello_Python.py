@@ -8,8 +8,9 @@ st.divider()
 st.markdown("""
 ### 📖Context            
 
-For context, I have been following the book **_Python Crash Course, 3rd Edition - A Hands-On, Project Based Introduction To Programming_** by **_Eric Matthes_**
-I always use this book for revision. It is just so clear and easy to understand. I recommend this to EVERYONE.
+For context, I have been following the books **_Python Crash Course, 3rd Edition - A Hands-On, Project Based Introduction To Programming_** by **_Eric Matthes_**  
+and **_Data Structures & Algorithms in Python_** by **_Michael T. Goodrich, Roberto Tamassia, Michael H. Goldwasser_**.
+I always use these books for revision. It is just so clear and easy to understand. I recommend this to EVERYONE.
 
 """)
 
