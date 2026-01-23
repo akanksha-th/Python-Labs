@@ -40,18 +40,18 @@ Output:
 ### Dictionary Operations
             
 - **Accessing Values** –>
-        - We can access the values in a dictionary using the keys.
-        - `.get()` –> we pass in the key as an argument to access the value, and if the key is not found, instead of throwing an error, it returns None or a default value if specified
-        - `.keys()` –> returns all the keys in the dictionary.
-        - `.values()` –> returns all the values in the dictionary.
-        - `.items()` –> returns all the key-value pairs in the dictionary as tuples.
+        - We can access the values in a dictionary using the keys.  
+        - `.get()` –> we pass in the key as an argument to access the value, and if the key is not found, instead of throwing an error, it returns None or a default value if specified  
+        - `.keys()` –> returns all the keys in the dictionary.  
+        - `.values()` –> returns all the values in the dictionary.  
+        - `.items()` –> returns all the key-value pairs in the dictionary as tuples.  
 """)
 code_access = '''
 my_dict = {"Isack Hadjar": "Red Bull Racing", "Kimi Antonelli": "Mercedes"}
-print(my_dict["Kimi Antonelli"])
-print(f"In 2026, Isack Hadjar is driving for {my_dict['Isack Hadjar']}")
+print(my_dict["Kimi Antonelli"])   
+print(f"In 2026, Isack Hadjar is driving for {my_dict['Isack Hadjar']}")   
 
-print(my_dict.get("Lewis Hamilton"))
+print(my_dict.get("Lewis Hamilton"))   
 print(my_dict.get("Lewis Hamilton", "No value assigned."))
 
 print("Keys:", my_dict.keys())
@@ -61,21 +61,21 @@ print("Items:", my_dict.items())
 st.code(code_access, language="python")
 st.markdown("""
 Output:  
-`Mercedes`
-`In 2026, Isack Hadjar is driving for Red Bull Racing`
+`Mercedes`  
+`In 2026, Isack Hadjar is driving for Red Bull Racing`  
             
-`None`
-`No value assigned.`
+`None`  
+`No value assigned.`  
 
-`Keys: dict_keys(['Isack Hadjar', 'Kimi Antonelli'])`
-`Values: dict_values(['Red Bull Racing', 'Mercedes'])`
-`Items: dict_items([('Isack Hadjar', 'Red Bull Racing'), ('Kimi Antonelli', 'Mercedes')])`
+`Keys: dict_keys(['Isack Hadjar', 'Kimi Antonelli'])`  
+`Values: dict_values(['Red Bull Racing', 'Mercedes'])`  
+`Items: dict_items([('Isack Hadjar', 'Red Bull Racing'), ('Kimi Antonelli', 'Mercedes')])`  
 
 ---
 
 - **Modifying Values** –>
-        - A new item can be added or an existing item can be modified by specifying the key and assigning a value to it.
-        - `del` keyword –> permanently removes an item from the dictionary using its key
+        - A new item can be added or an existing item can be modified by specifying the key and assigning a value to it.  
+        - `del` keyword –> permanently removes an item from the dictionary using its key  
 """)
 code_modify = '''
 my_dict = {"Isack Hadjar": "Red Bull Racing", "Lewis Hamilton": "Mercedes"}
@@ -156,6 +156,7 @@ st.info("""
 **Why this matters?**
 
 This structure is how:
+        
     - JSON APIs work
     - databases return rows
     - ML datasets are often structures/represented
@@ -194,6 +195,7 @@ st.info("""
 **Why this matters?**
         
 This structure is how:
+        
     - JSON responses are nested
     - configuration files are structured
     - complex data models are represented
@@ -219,7 +221,7 @@ Keys in a dictionary must be immutable. This is because once a key is hashed and
 st.divider()
 
 st.markdown("""
-### With dictionaries, we move beyond simple sequences. 
-I hope we're thrilled to move further, to understand more complex data structures.
+#### With dictionaries, we move beyond simple sequences. 
+####I hope we're thrilled to move further, to understand more complex data structures.
 
 """)
