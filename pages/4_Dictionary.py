@@ -222,6 +222,6 @@ st.divider()
 
 st.markdown("""
 #### With dictionaries, we move beyond simple sequences. 
-####I hope we're thrilled to move further, to understand more complex data structures.
+#### I hope we're thrilled to move further, to understand more complex data structures.
 
 """)
