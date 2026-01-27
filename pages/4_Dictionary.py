@@ -46,6 +46,21 @@ Output:
         - `.values()` –> returns all the values in the dictionary.  
         - `.items()` –> returns all the key-value pairs in the dictionary as tuples.  
 """)
+st.info("""
+_.keys()_, _.values()_, _.items()_ present us the **view** of the dictionary and dictionary views are **dynamic**, meaning they are  not static snapshots of the data; they are live, real-time reflections of the underlying dictionary.   
+if the dictionary changes, the view also changes.
+        
+##### **What even is a "view"?**
+
+A view is just like a window. Assume that you're at a hillstation, and you're looking outside from a window.  
+Whatever is outside can be accessed (seen) at any time, with the help of the window. That's the essence of it.
+        
+#### **How is a view different from a copy?**
+        
+A view gives us the real time access, but a copy is like a snapshot.  
+Using the previous analogy, if you take a picture of the scenery from your window, it is a copy. No matter, if the outside scenery changes, the picture has that one moment captured. 
+That's where lies all the difference.
+""")
 code_access = '''
 my_dict = {"Isack Hadjar": "Red Bull Racing", "Kimi Antonelli": "Mercedes"}
 print(my_dict["Kimi Antonelli"])   
@@ -76,6 +91,8 @@ Output:
 - **Modifying Values** –>
         - A new item can be added or an existing item can be modified by specifying the key and assigning a value to it.  
         - `del` keyword –> permanently removes an item from the dictionary using its key  
+        - `pop` –> if exists, it returns the value against the provided key. If the key does not exist, we can provide None value along with it it, to avoid `KeyError`
+        - `popitem()` –> it removes the last inserted item
 """)
 code_modify = '''
 my_dict = {"Isack Hadjar": "Red Bull Racing", "Lewis Hamilton": "Mercedes"}
@@ -89,6 +106,13 @@ print(my_dict)
 
 del my_dict["Lewis Hamilton"]
 print(my_dict)
+
+my_dict["Yuki Tsunoda"] = "Red Bull Racing"
+print(my_dict.pop("Yuki Tsunoda"))     
+print(my_dict.pop("Max Verstappen", None))     
+
+print(my_dict.popitem())
+print(my_dict)
 '''
 st.code(code_modify, language="python")
 st.markdown("""
@@ -98,6 +122,11 @@ Output:
 `{'Isack Hadjar': 'Red Bull Racing', 'Lewis Hamilton': 'Ferrari', 'Oscar Piastri': 'McLaren'}`  
 `{'Isack Hadjar': 'Red Bull Racing', 'Oscar Piastri': 'McLaren'}`
 
+`Red Bull Racing`   
+`None`   
+            
+`('Oscar Piastri', 'McLaren')`   
+`{'Isack Hadjar': 'Red Bull Racing'}`   
 --- 
             
 - **Looping through all key-value pairs** –>
@@ -129,6 +158,25 @@ Output:
 `Red Bull Racing`  
 `Mercedes`  
 `McLaren`  
+""")
+
+st.divider()
+
+st.markdown("""
+### Dictionary Comprehensions
+            
+Just an elegant way to create a dictionary. The basic syntax to create a dictionary comprehension is a single line of code enclosed in curly brackets `{}`.
+""")
+code_comp = '''
+nums = [1, 2, 3, 4, 5]
+squares = {x: x**2 for x in nums if x%2 == 0}
+
+print(squares)
+'''
+st.code(code_comp, language="python")
+st.markdown("""
+Output:   
+        `{2: 4, 4: 16}`   
 """)
 
 st.divider()
