@@ -403,8 +403,17 @@ We will explore hashing in more detail in later sections.
 
 Because of this underlying mechanism, dictionary lookups are usually very fast and do not typically grow slower as the dictionary gets larger.
 Keys in a dictionary must be immutable. This is because once a key is hashed and placed in a location, changing the key would change its hash and break the lookup mechanism.
-
+We will get more clarity through usage and the concepts in upcoming sections, but for some completeness and intuition, look at the given example.
+            
+For example:
 """)
+code_hash = '''
+d = {[1, 2]: "x"}   # throws TypeError -> list datatype is unhashable
+d = {(1, 2): "x"}   # this works fine
+d = {"prize": "x"}  # this too, works fine
+d = {{1, 2}: "x"}   # throws TypeError -> set datatype is unhashable
+'''
+st.code(code_hash, language="python")
 
 st.divider()
 
