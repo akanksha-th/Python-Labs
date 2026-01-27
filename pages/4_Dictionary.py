@@ -91,7 +91,7 @@ Output:
 - **Modifying Values** –>
         - A new item can be added or an existing item can be modified by specifying the key and assigning a value to it.  
         - `del` keyword –> permanently removes an item from the dictionary using its key  
-        - `pop` –> if exists, it returns the value against the provided key. If the key does not exist, we can provide None value along with it it, to avoid `KeyError`
+        - `pop` –> if exists, it returns the value against the provided key. If the key does not exist, we can provide None value along with it it, to avoid `KeyError`   
         - `popitem()` –> it removes the last inserted item
 """)
 code_modify = '''
@@ -126,7 +126,8 @@ Output:
 `None`   
             
 `('Oscar Piastri', 'McLaren')`   
-`{'Isack Hadjar': 'Red Bull Racing'}`   
+`{'Isack Hadjar': 'Red Bull Racing'}` 
+              
 --- 
             
 - **Looping through all key-value pairs** –>
@@ -255,9 +256,9 @@ st.markdown("""
 ### Advanced Dictionary Operations
             
 - **setdefault()** –>   
-        - if the key exists, it returns the existing value and doesn't change the dictionary
-        - if the key does not exist, it inserts the new key with the default value and returns the default value
-        - another use case for setdefault() is grouping items in a dictionary where each key's value is a list (or other mutable type)
+    - if the key exists, it returns the existing value and doesn't change the dictionary
+    - if the key does not exist, it inserts the new key with the default value and returns the default value
+    - another use case for setdefault() is grouping items in a dictionary where each key's value is a list (or other mutable type)
 """)
 code_setdefault = '''
 d = {"name": "Tom Riddle"}
@@ -282,25 +283,25 @@ print(f"Grouped Data: {grouped_data}")
 st.code(code_setdefault, language="python")
 st.markdown("""
 Output:  
-            `Name: Tom Riddle` 
-            `Dictionary: {'name': 'Tom Riddle'}`   
+`Name: Tom Riddle` 
+`Dictionary: {'name': 'Tom Riddle'}`   
 
-            `Age: 21`
-            `Dictionary: {'name': 'Tom Riddle', 'age': '21'}`   
+`Age: 21`
+`Dictionary: {'name': 'Tom Riddle', 'age': '21'}`   
 
-            `Dictionary: {'name': 'Tom Riddle', 'age': '21', 'roll_number': [103, 221]}`   
+`Dictionary: {'name': 'Tom Riddle', 'age': '21', 'roll_number': [103, 221]}`   
 
-            `Grouped Data: {'a': [1, 3], 'b': [2], 'c': [3]}`   
+`Grouped Data: {'a': [1, 3], 'b': [2], 'c': [3]}`      
 """)
 st.info("""
-### setdefault() vs get() 
+#### setdefault() vs get() 
 
 *_setdefault()_* modifies the dictionary by adding the key-value pair if the key is missing,   
 while *_get()_* only returns a default value without modifying the dictionary        
 """)
 
 st.markdown("""
-- ** frequency map ** –>   
+- **frequency map** –>   
         - using .get() function   
         - using collections.Counter –> specifically designed for counting hashable objects   
         - using collections.defaultdict –> automatically initializes new keys with a default value (e.g., 0 for an int) when they are first accessed, eliminating the need to check if a key exists   
@@ -341,18 +342,18 @@ st.code(code_freq_map, language="python")
 
 st.markdown("""
 Output:   
-        `Freq Map: {'apple': 2, 'banana': 3, 'orange': 1}`   
-            
-        `Counter({'banana': 3, 'apple': 2, 'orange': 1})`   
-        `Freq Map: {'apple': 2, 'banana': 3, 'orange': 1}`   
-            
-        `Freq Map: defaultdict(<class 'int'>, {'apple': 2, 'banana': 3, 'orange': 1})`   
-            
-        `Freq Map: {'apple': 2, 'banana': 3, 'orange': 1}`   
+`Freq Map: {'apple': 2, 'banana': 3, 'orange': 1}`   
+    
+`Counter({'banana': 3, 'apple': 2, 'orange': 1})`   
+`Freq Map: {'apple': 2, 'banana': 3, 'orange': 1}`   
+    
+`Freq Map: defaultdict(<class 'int'>, {'apple': 2, 'banana': 3, 'orange': 1})`   
+    
+`Freq Map: {'apple': 2, 'banana': 3, 'orange': 1}`   
 
 --- 
 
-- ** Dictionary Merging ** –>   
+- **Dictionary Merging** –>   
         - update()   
         - **|** (Union) operator –> cleaner than update() in Python   
         
@@ -381,13 +382,13 @@ print(dict2)
 st.code(code_dict_merge, language="python")
 st.markdown("""
 Output:   
-        `{'a': 1, 'b': 1, 'c': 4}`   
+`{'a': 1, 'b': 1, 'c': 4}`   
 
-        `{'a': 1, 'b': 1, 'c': 4}`   
+`{'a': 1, 'b': 1, 'c': 4}`   
 
-        `{'a': 1, 'b': 1, 'c': 4}`   
-            
-        `{'b': 2, 'c': 4, 'a': 1}`
+`{'a': 1, 'b': 1, 'c': 4}`   
+    
+`{'b': 2, 'c': 4, 'a': 1}`
 """)
 
 st.divider()

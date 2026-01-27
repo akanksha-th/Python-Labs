@@ -7,9 +7,9 @@ st.divider()
 st.markdown("""
 ### Sets Overview - Hash-Based Collections  
 
-Lists ––> ordered containers   
-Dictionaries ––> key-value mappings   
-Sets ––> keys without values   
+        Lists ––> ordered containers   
+        Dictionaries ––> key-value mappings   
+        Sets ––> keys without values   
 A set is basically a dictionary where the values do not matter.
 
 A set is an unordered collection (meaning the order of elements is not retained) of unique, immutable elements. It can be created using `set()` or using curly brackets `{}`, with items separated by commas.
@@ -31,6 +31,7 @@ s = {"apple", "zebra", "poor", "beatles", "zinc"}
 print(s)      # the order is not retained
 '''
 st.code(code_set, language="python")
+
 st.markdown("""
 Output:   
 `{1, 2, 3}`   
@@ -64,6 +65,7 @@ Output:
 `After addition: {1, 2, 3, 4}`   
 `After adding duplicate: {1, 2, 3, 4}`   
 Sets automatically ignore duplicates, and no error is raised when adding an existing element.
+
 ---
             
 - **remove**:  
