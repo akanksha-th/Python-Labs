@@ -12,16 +12,16 @@ st.markdown("""
         Sets ––> keys without values   
 A set is basically a dictionary where the values do not matter.
 
-A set is an unordered collection (meaning the order of elements is not retained) of unique elements, where each element must be **hashable (typically immutable)**. It can be created using `set()`, with items separated by commas.
+A set is an unordered collection of unique elements (meaning the order of elements is not retained), where each element must be **hashable (typically immutable)**.   
+It can be created using `set()`, with items separated by commas.   
 _Note that `{}` creates an empty dictionary, not an empty set._
 
-Which implies, 
-    - sets reinforce hashing i.e. **set elements must be immutable**.   
-    - as dictionaries were used for fast lookup, sets are used for **fast membership check**.   
-    - it contains unique elements only.
-    - **No indexing or slicing**:   
-        - sets do not support indexing (`s[0]`)   
-        - because elements are unordered   
+Which implies,    
+- sets reinforce hashing i.e. **set elements must be immutable**.   
+- as dictionaries were used for fast lookup, sets are used for **fast membership check**.   
+- it contains unique elements only.   
+- **No indexing or slicing**:   
+        - sets do not support indexing (`s[0]`), because elements are unordered   
 
 """)
 code_set = '''
@@ -44,7 +44,7 @@ st.markdown("""
 Output:   
 `{1, 2, 3}`   
 `set()`    
-`{'poor', 'apple', 'zinc', 'beatles', 'zebra'}` 
+`{'poor', 'apple', 'zinc', 'beatles', 'zebra'}`   
 `TypeError`        
 """)
 
@@ -215,7 +215,14 @@ Output:
             
 - **In-place Set Operations (Mutations)**   
 - **Subset, Superset & Disjoint Set**   
+        - these are logical relationship checks, not algebra.   
+        - **subset** checks if one set is a subset to the other   
+        - **superset** checks if one set contains the other set   
+        - **disjoint** checks if the two given sets have any common elements.   
+
 - **Frozen Sets**  
+        - a frozenset is an immutable set, meaning its elements cannot be changed, added, or removed after it is created.   
+        - the name `frozenset` highlights that the collection of elements is "frozen" in time once initialized
 """)
 code_more_ops = '''
 a, b = {1, 2, 3}, {3, 4, 5}
@@ -295,7 +302,6 @@ Sets are heavily used in algorithms for:
 
 st.divider()
 st.markdown("""
-#### Sets help us reason about presence, absence, overlap and exclusivity.
-#### They pair naturally with dictionaries and are foundational for graphs and algorithms.
-# Happy Learning Ahead (Going Great Already!!)            
+#### Sets help us reason about presence, absence, overlap and exclusivity. They pair naturally with dictionaries and are foundational for graphs and algorithms.
+#### Happy Learning Ahead (Going Great Already!!)            
 """)
