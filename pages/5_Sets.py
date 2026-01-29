@@ -12,12 +12,17 @@ st.markdown("""
         Sets ––> keys without values   
 A set is basically a dictionary where the values do not matter.
 
-A set is an unordered collection (meaning the order of elements is not retained) of unique, immutable elements. It can be created using `set()` or using curly brackets `{}`, with items separated by commas.
-            
+A set is an unordered collection (meaning the order of elements is not retained) of unique elements, where each element must be **hashable (typically immutable)**. It can be created using `set()`, with items separated by commas.
+_Note that `{}` creates an empty dictionary, not an empty set._
+
 Which implies, 
     - sets reinforce hashing i.e. **set elements must be immutable**.   
     - as dictionaries were used for fast lookup, sets are used for **fast membership check**.   
     - it contains unique elements only.
+    - **No indexing or slicing**:   
+        - sets do not support indexing (`s[0]`)   
+        - because elements are unordered   
+
 """)
 code_set = '''
 # creating a set
@@ -29,6 +34,9 @@ print(s)
 
 s = {"apple", "zebra", "poor", "beatles", "zinc"}
 print(s)      # the order is not retained
+
+s = {10, 20, 30}
+# print(s[0])   # TypeError
 '''
 st.code(code_set, language="python")
 
@@ -36,7 +44,19 @@ st.markdown("""
 Output:   
 `{1, 2, 3}`   
 `set()`    
-`{'poor', 'apple', 'zinc', 'beatles', 'zebra'}`      
+`{'poor', 'apple', 'zinc', 'beatles', 'zebra'}` 
+`TypeError`        
+""")
+
+st.info("""
+#### What Exactly is mutable in a set?
+        
+As I said earlier, set elements have to be immutable. But, as a fact, _set objects_ are unhashable, meaning 'set' is mutable.  
+WHAT????? Confused, right??? I too, was.   
+        
+But let me clear up the fog.
+        
+**A set is unhashable because its contents can change, not because its elements are mutable.**
 """)
             
 st.divider()
@@ -140,5 +160,142 @@ _Order is never guaranteed._
 st.divider()
 
 st.markdown("""
-      
+### Set Algebra
+            
+Set algebra lets us compare, combine, and reason about relationships between groups of elements.
+- **Union (|)**:   
+        - merges unique values
+            
+- **Intersection (&)**:   
+        - returns common items
+            
+- **Difference (-)**:   
+        - used for filtering or removing exclusions
+        - returns elements present in the first set but not the second
+            
+- **Symmetric Difference (^)**:  
+        - returns elements present in either set, but not both
+""")
+code_basic_ops = '''
+a, b = {1, 2, 3}, {3, 4, 5}
+
+# Union
+print(a | b)
+print(a.union(b))
+
+# Intersection
+print(a & b)
+print(a.intersection(b))
+
+# Difference
+print(a - b)
+print(a.difference(b))
+
+# Symmetric Difference
+print(a ^ b)
+print(a.symmetric_difference(b))
+''' 
+st.code(code_basic_ops, language="python")
+
+st.markdown(""" 
+Output:   
+`{1, 2, 3, 4, 5}`   
+`{1, 2, 3, 4, 5}`   
+            
+`{3}`  
+`{3}`  
+            
+`{1, 2}`  
+`{1, 2}`  
+            
+`{1, 2, 4, 5}`  
+`{1, 2, 4, 5}`  
+
+---
+            
+- **In-place Set Operations (Mutations)**   
+- **Subset, Superset & Disjoint Set**   
+- **Frozen Sets**  
+""")
+code_more_ops = '''
+a, b = {1, 2, 3}, {3, 4, 5}
+
+# Mutations
+a |= b; print(a)        # Input: a = {1, 2, 3}
+a -= b; print(a)        # Input: a = {1, 2, 3, 4, 5}
+a &= b; print(a)        # Input: a = {1, 2}
+a ^= b; print(a)        # Input: a = set() / {}
+
+# ---------------------
+a, b = {1, 2}, {1, 2, 3}
+
+# Subset
+print(a.issubset(b))
+
+# Superset
+print(b.issuperset(a))
+
+# Disjoint
+y = {3, 4}
+print(a.isdisjoint(b))
+print(a.isdisjoint(y))
+
+# ---------------------
+fs = frozenset([1, 2, 3])
+print(fs)
+try:
+        fs.add(4)    # AttributeError
+except Exception:
+        print("Cannot add elements")
+
+try:
+        d = {
+        {1, 2}: "a",
+        {3, 4}: "b"
+        }
+except Exception:
+        print("cannot use 'set' as a dict key, as it is unhashable")
+
+d = {
+frozenset({1, 2}): "group A",
+frozenset({3, 4}): "group B"
+}
+print("This is valid")
+print(d)
+'''
+st.code(code_more_ops, language="python")
+st.markdown("""
+Output:   
+`{1, 2, 3, 4, 5}`   
+`{1, 2}`  
+`set()`  
+`{3, 4, 5}`   
+
+`True`   
+            
+`True`  
+             
+`False`   
+`True`   
+            
+`frozenset({1, 2, 3})`  
+`Cannot add elements`    
+            
+`cannot use 'set' as a dict key, as it is unhashable`   
+`{frozenset({1, 2}): 'group A', frozenset({3, 4}): 'group B'}`   
+""")
+
+st.divider()
+st.info('''
+Sets are heavily used in algorithms for:
+- visited tracking (graphs, DFS/BFS)
+- duplicate elimination
+- fast membership checks (O(1) average)
+''')
+
+st.divider()
+st.markdown("""
+#### Sets help us reason about presence, absence, overlap and exclusivity.
+#### They pair naturally with dictionaries and are foundational for graphs and algorithms.
+# Happy Learning Ahead (Going Great Already!!)            
 """)
