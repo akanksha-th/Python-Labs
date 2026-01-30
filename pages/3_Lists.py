@@ -126,7 +126,7 @@ Output: `['bmw', 'yamaha', 'suzuki', 'ducati', 'ducati', 'bmw']`
 ---
                   
 - **Sorting a list** –>  
-        - `.sort()` –> sorts the list permanently, in ascending order by default   
+        - `.sort()` –> sorts the list permanently **in-place**, in ascending order by default   
         - `sorted() function` –> returns a new sorted list without modifying the original list –> it accept a reverse=True argument if you want to
 display a list in reverse-alphabetical order
 
@@ -135,6 +135,9 @@ display a list in reverse-alphabetical order
 """)
 code_sort = '''
 motorcycles = ['honda', 'bmw', 'yamaha', 'suzuki', 'ducati']
+
+new_list = motorcycles.sort()
+print(new_list)
 
 print(f"Here is the sorted list: {sorted(motorcycles)}")
 print(sorted(motorcycles, reverse=True))
@@ -149,6 +152,8 @@ print(f"Reversed list: {motorcycles}")
 st.code(code_sort, language="python")
 st.markdown("""
 Output:  
+`None`  # .sort() returns None because it mutates in place   
+
         `Here is the sorted list: ['bmw', 'ducati', 'honda', 'suzuki', 'yamaha']`  
         `['yamaha', 'suzuki', 'honda', 'ducati', 'bmw']`  
         `Here is the original list: ['honda', 'bmw', 'yamaha', 'suzuki', 'ducati']`  
