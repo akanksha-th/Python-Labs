@@ -121,6 +121,131 @@ Output:
 
 st.divider()
 st.markdown("""
+### Common Tuple Operations
+
+- **Basic Operations**:   
+        - `len()` –> returns the number of items in the tuple
+        - for homogeneous, numeric tuples:   
+            - `min() / max()` –> returns the smallest / largest element
+            - `sum()` –> returns the sum of numeric elements            
+""")
+code_basic = '''
+demo_tup = ("hi", "people", 23, 4.7)
+print(len(demo_tup))
+
+num_tup = (23, 46, 29, 46.9, 17)
+print(f"Max: {max(num_tup)}, Min: {min(num_tup)}")
+print(f"Sum: {sum(num_tup)}")
+'''
+st.code(code_basic, language="python")
+
+st.markdown("""
+Output:   
+`4`   
+
+`Max: 46.9, Min: 17`   
+            
+`Sum: 161.9`   
+              
+---
+
+- **Searching / Counting**:   
+        - `.index()` –> returns the index of first occurrence
+        - `.count()` –> returns the total number of occurrences of the specified element    
+""")
+code_search = '''
+num_tup = (23, 46, 29, 23, 46.9, 17)
+
+print(num_tup.index(23))
+print(num_tup.count(23))
+'''
+st.code(code_search, language="python")
+
+st.markdown("""
+Output:   
+`0`   
+`2`  
+
+---
+
+- **Concatenation and Repetition**:   
+        - `+` –> two tuples can be concatenated using the `+` operator
+        - `*n` –> a tuple can be repeated n times using `*` operator
+""")
+code_concat = '''
+tup1 = (23, 46, 29)
+tup2 = (23, 46.9, 17)
+
+print(tup1 + tup2)
+print(tup1*2)
+'''
+st.code(code_concat, language="python")
+
+st.markdown("""
+Output:   
+`(23, 46, 29, 23, 46.9, 17)`   
+`(23, 46, 29, 23, 46, 29)`   
+             
+---
+            
+- **Membership check**:   
+        - `in` –> we can check if value `in` tuple or value `not in` tuple
+""")
+code_memb = '''
+num_tup = (23, 46, 29, 23, 46.9, 17)
+
+print("Present" if 23 in num_tup else "Not Present")
+print("Not Present" if 56 not in num_tup else "Present")
+'''
+
+st.markdown("""
+Output:   
+`Present`   
+`Not Present`   
+            
+---
+
+- **Conversion**:     
+        - `list(tuple)` –> convert to list for mutability
+        - `tuple(list)` –> convert list into tuple
+""")
+code_conversion = '''
+demo_list = [3, 5, 7, 8]
+demo_tuple = (2, 4, 6, 8)
+
+new_list = list(demo_tuple)
+print(new_list, type(new_list))
+
+new_tuple = tuple(demo_list)
+print(new_tuple, type(new_tuple))
+'''
+st.code(code_conversion, language="python")
+
+st.markdown("""
+Output:   
+`[2, 4, 6, 8] <class 'list'>`   
+
+`(3, 5, 7, 8) <class 'tuple'>`   
+
+---
+            
+- **Slicing**:   
+        - `tuple[start:end:step]` –> access parts of tuple
+""")
+code_slice = '''
+num_tup = (23, 46, 29, 23, 46.9, 17)
+
+print(num_tup[1::2])
+'''
+st.code(code_slice, language="python")
+
+st.markdown("""
+Output:      
+`(46, 23, 17)`   
+""")
+
+st.divider()
+st.markdown("""
 ### The Idea of Immutability
             
 We have talked few times about "immutability" now. Let's understand what it actually is, and why is it important to us?   
@@ -192,7 +317,8 @@ except TypeError:
 st.code(code_hash, language="python")
 st.markdown("""
 Output:   
-`529344067295497451`   # memory
+`529344067295497451`   
+_The specific output integer will be different each time the program runs due to hash randomization in Python 3, but it will be consistent within a single execution_
 
 `Tuple is unhashable due to mutable element`
 """)
