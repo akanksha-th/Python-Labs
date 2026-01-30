@@ -228,6 +228,7 @@ code_more_ops = '''
 a, b = {1, 2, 3}, {3, 4, 5}
 
 # Mutations
+# Each operation mutates a, so its value carries forward.
 a |= b; print(a)        # Input: a = {1, 2, 3}
 a -= b; print(a)        # Input: a = {1, 2, 3, 4, 5}
 a &= b; print(a)        # Input: a = {1, 2}
